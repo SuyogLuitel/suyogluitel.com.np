@@ -8,16 +8,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-
-export interface Project {
-  id: number;
-  title: string;
-  description: string;
-  image: string;
-  tags: string[];
-  liveUrl?: string;
-  githubUrl?: string;
-}
+import { Project } from "@/utils/projectData";
 
 interface ProjectCardProps {
   project: Project;

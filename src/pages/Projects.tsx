@@ -1,81 +1,18 @@
 import { useState } from "react";
 import { Card, CardContent } from "@/components/ui/card";
-import { ProjectCard, Project } from "@/components/ProjectCard";
-
-// Sample data
-const projects: Project[] = [
-  {
-    id: 1,
-    title: "E-Commerce Website Redesign",
-    description:
-      "A complete redesign of an online store with improved user experience and modern design principles.",
-    image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d",
-    tags: ["React", "TypeScript", "Tailwind CSS"],
-    liveUrl: "https://example.com",
-    githubUrl: "https://github.com",
-  },
-  {
-    id: 2,
-    title: "Task Management Dashboard",
-    description:
-      "An interactive dashboard for managing tasks and projects with drag-and-drop functionality.",
-    image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6",
-    tags: ["Next.js", "React Query", "Styled Components"],
-    liveUrl: "https://example.com",
-    githubUrl: "https://github.com",
-  },
-  {
-    id: 3,
-    title: "Personal Finance Tracker",
-    description:
-      "A mobile-first application for tracking personal expenses and visualizing spending habits.",
-    image: "https://images.unsplash.com/photo-1518770660439-4636190af475",
-    tags: ["JavaScript", "Chart.js", "Firebase"],
-    liveUrl: "https://example.com",
-    githubUrl: "https://github.com",
-  },
-  {
-    id: 4,
-    title: "Fitness Tracking Mobile App",
-    description:
-      "A cross-platform mobile application for tracking workouts and health metrics with personalized recommendations.",
-    image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b",
-    tags: ["React Native", "Redux", "Firebase"],
-    liveUrl: "https://example.com",
-    githubUrl: "https://github.com",
-  },
-  {
-    id: 5,
-    title: "Real Estate Listing Platform",
-    description:
-      "A platform connecting property owners and potential buyers with advanced filtering and search capabilities.",
-    image: "https://images.unsplash.com/photo-1649972904349-6e44c42644a7",
-    tags: ["Vue.js", "Vuex", "Node.js"],
-    liveUrl: "https://example.com",
-    githubUrl: "https://github.com",
-  },
-  {
-    id: 6,
-    title: "Social Media Analytics Dashboard",
-    description:
-      "A comprehensive dashboard for tracking social media performance across multiple platforms with data visualization.",
-    image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d",
-    tags: ["React", "D3.js", "Express"],
-    liveUrl: "https://example.com",
-    githubUrl: "https://github.com",
-  },
-];
+import { ProjectCard } from "@/components/ProjectCard";
+import { ProjectData } from "@/utils/projectData";
 
 // Get unique tags from all projects
-const allTags = Array.from(new Set(projects.flatMap((p) => p.tags)));
+const allTags = Array.from(new Set(ProjectData.flatMap((p) => p.tags)));
 
 const Projects = () => {
   const [selectedTags, setSelectedTags] = useState<string[]>([]);
 
   const filteredProjects =
     selectedTags.length === 0
-      ? projects
-      : projects.filter((project) =>
+      ? ProjectData
+      : ProjectData.filter((project) =>
           project.tags.some((tag) => selectedTags.includes(tag))
         );
 

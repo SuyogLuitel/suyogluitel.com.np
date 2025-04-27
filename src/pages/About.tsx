@@ -40,7 +40,7 @@ const experiences = [
     period: "Feb 2024 - May 2024",
     description:
       "Assisted in building and maintaining client websites. Implemented responsive designs and improved site performance.",
-    technologies: ["HTML", "CSS", "JavaScript", "Vue.js"],
+    technologies: ["HTML", "CSS", "JavaScript", "React"],
   },
 ];
 

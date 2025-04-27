@@ -1,40 +1,8 @@
 import { Link } from "react-router-dom";
 import { Button } from "../ui/button";
 import { ArrowRight } from "lucide-react";
-import { ProjectCard, Project } from "../ProjectCard";
-
-const projects: Project[] = [
-  {
-    id: 1,
-    title: "E-Commerce Website Redesign",
-    description:
-      "A complete redesign of an online store with improved user experience and modern design principles.",
-    image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d",
-    tags: ["React", "TypeScript", "Tailwind CSS"],
-    liveUrl: "https://example.com",
-    githubUrl: "https://github.com",
-  },
-  {
-    id: 2,
-    title: "Task Management Dashboard",
-    description:
-      "An interactive dashboard for managing tasks and projects with drag-and-drop functionality.",
-    image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6",
-    tags: ["Next.js", "React Query", "Styled Components"],
-    liveUrl: "https://example.com",
-    githubUrl: "https://github.com",
-  },
-  {
-    id: 3,
-    title: "Personal Finance Tracker",
-    description:
-      "A mobile-first application for tracking personal expenses and visualizing spending habits.",
-    image: "https://images.unsplash.com/photo-1518770660439-4636190af475",
-    tags: ["JavaScript", "Chart.js", "Firebase"],
-    liveUrl: "https://example.com",
-    githubUrl: "https://github.com",
-  },
-];
+import { ProjectCard } from "../ProjectCard";
+import { ProjectData } from "@/utils/projectData";
 
 const FeaturedProjects = () => {
   return (
@@ -56,9 +24,11 @@ const FeaturedProjects = () => {
         </div>
 
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-          {projects.map((project, index) => (
-            <ProjectCard key={project.id} project={project} index={index} />
-          ))}
+          {ProjectData.filter((project) => project.isFeatured).map(
+            (project, index) => (
+              <ProjectCard key={project.id} project={project} index={index} />
+            )
+          )}
         </div>
       </div>
     </section>
