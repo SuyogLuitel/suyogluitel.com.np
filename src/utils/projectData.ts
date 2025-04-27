@@ -20,8 +20,8 @@ export const ProjectData: Project[] = [
     description:
       "Avyaas is an online exam preparation application. It has courses from medical entrance preparation to post-graduate entrance preparation.",
     image: avyaas,
-    tags: ["React", "TypeScript", "Tailwind CSS"],
-    liveUrl: "https://unentrance.com/",
+    tags: ["React", "React Query", "TypeScript", "Tailwind CSS", "Zustand"],
+    liveUrl: "https://avyaas.com/",
     githubUrl: "",
     isFeatured: true,
   },
@@ -31,7 +31,7 @@ export const ProjectData: Project[] = [
     description:
       "A cloud-based, AI-powered Attendance Management System for businesses of all sizes.",
     image: ams,
-    tags: ["React", "React Query", "Tailwind CSS"],
+    tags: ["React", "React Query", "Tailwind CSS", "Zustand"],
     liveUrl: "https://ams.ayata.com.np/",
     githubUrl: "",
     isFeatured: true,
@@ -42,8 +42,8 @@ export const ProjectData: Project[] = [
     description:
       "Zunun is web based application based on Guatemala which manages school online with features such as online class, quiz, assigmnment submission, interactive discussion, etc.",
     image: zunun,
-    tags: ["React", "TypeScript", "Tailwind CSS"],
-    liveUrl: "https://example.com",
+    tags: ["React", "React Query", "TypeScript", "Tailwind CSS", "Zustand"],
+    liveUrl: "https://unentrance.com/",
     githubUrl: "https://github.com",
     isFeatured: true,
   },
