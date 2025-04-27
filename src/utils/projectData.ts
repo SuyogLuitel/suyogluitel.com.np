@@ -1,6 +1,7 @@
 import avyaas from "../assets/avyaas.png";
 import ams from "../assets/ams.png";
 import zunun from "../assets/zunun.png";
+import cedep from "../assets/cedep.png";
 
 export interface Project {
   id: number;
@@ -44,7 +45,18 @@ export const ProjectData: Project[] = [
     image: zunun,
     tags: ["React", "React Query", "TypeScript", "Tailwind CSS", "Zustand"],
     liveUrl: "https://unentrance.com/",
-    githubUrl: "https://github.com",
+    githubUrl: "",
     isFeatured: true,
+  },
+  {
+    id: 3,
+    title: "Cedep Billing System",
+    description:
+      "Cedep Billing System is a platform which manages all the billing done in cedep institute.",
+    image: cedep,
+    tags: ["React", "React Query", "Tailwind CSS", "Zustand"],
+    liveUrl: "https://cedepnepal.avyaas.app/",
+    githubUrl: "",
+    isFeatured: false,
   },
 ];

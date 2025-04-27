@@ -9,7 +9,7 @@ const skills = [
   },
   {
     category: "Frameworks & Libraries",
-    items: ["React", "Next.js", "Vue.js", "Redux/Zustand"],
+    items: ["React", "Next.js", "Zustand", "Redux"],
   },
   {
     category: "Styling",
@@ -36,10 +36,10 @@ const experiences = [
   },
   {
     title: "Frontend Developer Intern",
-    company: "Ayata Studio",
+    company: "Ayata Inc.",
     period: "Feb 2024 - May 2024",
     description:
-      "Assisted in building and maintaining client websites. Implemented responsive designs and improved site performance.",
+      "Gained hands-on experience in frontend development during an internship, focusing on building and optimizing user interfaces using React, JavaScript, and CSS.",
     technologies: ["HTML", "CSS", "JavaScript", "React"],
   },
 ];
@@ -84,9 +84,12 @@ const About = () => {
                 approaches to stay at the forefront of the industry.
               </p>
             </div>
-            <div className="pt-2">
-              <Button className="mt-2 mr-2">
-                <Download className="mr-2 h-4 w-4" />
+            <div className="flex items-center gap-3">
+              <Button
+                onClick={() => window.open("./resume.pdf", "_blank")}
+                className=""
+              >
+                <Download className="h-4 w-4" />
                 Download CV
               </Button>
               <Button asChild variant="outline">
