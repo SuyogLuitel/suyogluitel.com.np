@@ -102,6 +102,8 @@ const Page = () => {
                   <Image
                     src={project.image}
                     alt={project.title}
+                    width={400}
+                    height={200}
                     className="w-full h-full object-cover"
                   />
                 </div>

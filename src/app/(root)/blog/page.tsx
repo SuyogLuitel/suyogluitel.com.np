@@ -45,6 +45,8 @@ const Page = () => {
                 <Image
                   src={`https://images.unsplash.com/${blog.image}?w=400&h=200&fit=crop`}
                   alt={blog.title}
+                  width={400}
+                  height={200}
                   className="w-full h-full object-cover transition-transform duration-300 hover:scale-110"
                 />
               </div>
